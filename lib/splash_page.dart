@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
+import 'next_screen.dart';
 
 class Splash extends StatelessWidget {
   const Splash({super.key});
 
   @override
   Widget build(BuildContext context) {
+    Future.delayed(const Duration(seconds: 5), () {
+      // Replace 'NextScreen()' with the screen you want to navigate to
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (context) => const nextPage()),
+      );
+    });
     return Scaffold(
       body: SafeArea(
           child: Column(
